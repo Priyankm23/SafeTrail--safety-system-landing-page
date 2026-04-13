@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Shield, Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Shield, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,30 +13,32 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'Architecture', href: '#architecture' },
-    { name: 'Components', href: '#components' },
-    { name: 'Tech Stack', href: '#tech-stack' },
+    { name: "Features", href: "#features" },
+    { name: "Architecture", href: "#architecture" },
+    { name: "Components", href: "#components" },
+    { name: "Tech Stack", href: "#tech-stack" },
   ];
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-beige-200 shadow-sm py-3'
-          : 'bg-transparent'
+          ? "bg-white/90 backdrop-blur-md border-b border-beige-200 shadow-sm py-3"
+          : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <Shield className="w-8 h-8 text-electric-blue group-hover:scale-110 transition-transform" />
-          <span className="text-xl font-bold tracking-tight text-beige-900">SafeTrail</span>
+          <span className="text-xl font-bold tracking-tight text-beige-900">
+            SafeTrail
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -50,12 +52,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            href="#demo"
-            className="bg-electric-blue hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all hover:shadow-[0_0_15px_rgba(29,111,196,0.4)] active:scale-95"
-          >
-            View Dashboard →
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -80,13 +76,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            href="#demo"
-            className="bg-electric-blue text-white px-5 py-3 rounded-xl text-center font-semibold"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            View Dashboard →
-          </Link>
         </div>
       )}
     </nav>

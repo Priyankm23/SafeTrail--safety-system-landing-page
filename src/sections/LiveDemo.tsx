@@ -1,28 +1,51 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Smartphone, LayoutDashboard, GitBranch, Download, ExternalLink, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import {
+  Smartphone,
+  LayoutDashboard,
+  GitBranch,
+  Download,
+  ExternalLink,
+  ArrowRight,
+} from "lucide-react";
+import Link from "next/link";
 
 const repos = [
-  { label: "Tourist App",        slug: "smart-safety",                       owner: "Meetpatel006" },
-  { label: "Authority Dashboard",slug: "authority-dashboard",                 owner: "Priyankm23" },
-  { label: "Backend API",        slug: "smart-tourist-safety-app-backend",    owner: "Priyankm23" },
-  { label: "Path Deviation",     slug: "path-deviation",                      owner: "Meetpatel006" },
+  { label: "Tourist App", slug: "smart-safety", owner: "Meetpatel006" },
+  {
+    label: "Authority Dashboard",
+    slug: "authority-dashboard",
+    owner: "Priyankm23",
+  },
+  {
+    label: "Backend API",
+    slug: "smart-tourist-safety-app-backend",
+    owner: "Priyankm23",
+  },
+  { label: "Path Deviation", slug: "path-deviation", owner: "Meetpatel006" },
 ];
 
 export default function LiveDemo() {
   return (
-    <section id="demo" className="py-28 section-surface-white relative overflow-hidden">
+    <section
+      id="demo"
+      className="py-28 section-surface-white relative overflow-hidden"
+    >
       {/* subtle radial glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center">
-        <div style={{ width: 800, height: 500,
-          background: "radial-gradient(ellipse, rgba(29,111,196,0.06) 0%, transparent 70%)",
-          filter: "blur(60px)" }} />
+        <div
+          style={{
+            width: 800,
+            height: 500,
+            background:
+              "radial-gradient(ellipse, rgba(29,111,196,0.06) 0%, transparent 70%)",
+            filter: "blur(60px)",
+          }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-
         {/* ── Header ──────────────────────────────────────── */}
         <div className="mb-14">
           <motion.p
@@ -41,7 +64,8 @@ export default function LiveDemo() {
               transition={{ delay: 0.06 }}
               className="text-4xl md:text-5xl font-black text-beige-900 leading-tight tracking-tight"
             >
-              Explore &amp; experience<br />
+              Explore &amp; experience
+              <br />
               <span className="text-electric-blue">SafeTrail live</span>
             </motion.h2>
             <motion.p
@@ -51,15 +75,14 @@ export default function LiveDemo() {
               transition={{ delay: 0.1 }}
               className="text-beige-500 md:max-w-xs text-sm leading-relaxed"
             >
-              Access the authority dashboard, install the Android app,
-              or dive into the open-source repositories.
+              Access the authority dashboard, install the Android app, or dive
+              into the open-source repositories.
             </motion.p>
           </div>
         </div>
 
         {/* ── Primary action cards ─────────────────────────── */}
         <div className="grid md:grid-cols-2 gap-5 mb-5">
-
           {/* Authority Dashboard */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,10 +98,13 @@ export default function LiveDemo() {
                 <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
                 Live environment
               </div>
-              <h3 className="text-2xl font-black leading-snug mb-3">Authority Command Centre</h3>
+              <h3 className="text-2xl font-black leading-snug mb-3">
+                Authority Command Centre
+              </h3>
               <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-                Log in with demo credentials to explore real-time SOS management,
-                tourist heatmaps, and unit assignment — fully functional.
+                Log in with demo credentials to explore real-time SOS
+                management, tourist heatmaps, and unit assignment — fully
+                functional.
               </p>
             </div>
 
@@ -114,7 +140,9 @@ export default function LiveDemo() {
                 <Smartphone className="w-3.5 h-3.5" />
                 Android only
               </div>
-              <h3 className="text-2xl font-black text-beige-900 leading-snug mb-3">Tourist Safety App</h3>
+              <h3 className="text-2xl font-black text-beige-900 leading-snug mb-3">
+                Tourist Safety App
+              </h3>
               <p className="text-beige-600 text-sm leading-relaxed max-w-sm">
                 Install the APK directly to experience the 3-tier panic button,
                 geofence map, and blockchain digital ID on your Android device.
@@ -123,7 +151,8 @@ export default function LiveDemo() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="#"
+                href="https://github.com/Meetpatel006/smart-safety/releases/download/v1.4.1/SmartSafety-1.4.1-release.apk"
+                target="_blank"
                 className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-safe hover:bg-emerald-600 text-white font-bold text-sm transition-all active:scale-95 shadow-[0_4px_20px_rgba(15,155,107,0.3)]"
               >
                 Download APK <Download className="w-4 h-4" />
@@ -138,7 +167,8 @@ export default function LiveDemo() {
             </div>
 
             <p className="text-[10px] font-semibold text-beige-400 -mt-4">
-              Enable &quot;Install from unknown sources&quot; in Android settings before installing.
+              Enable &quot;Install from unknown sources&quot; in Android
+              settings before installing.
             </p>
           </motion.div>
         </div>
@@ -153,8 +183,12 @@ export default function LiveDemo() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-beige-400 mb-1">Open source</p>
-              <p className="text-sm font-bold text-beige-900">All 4 repositories are publicly available on GitHub</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-beige-400 mb-1">
+                Open source
+              </p>
+              <p className="text-sm font-bold text-beige-900">
+                All 4 repositories are publicly available on GitHub
+              </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {repos.map((r, i) => (
@@ -172,7 +206,6 @@ export default function LiveDemo() {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
