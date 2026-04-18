@@ -568,14 +568,6 @@ export default function Hero() {
         transition={{ duration: 0.75 }}
         className="flex flex-col items-center text-center px-6 max-w-4xl mx-auto"
       >
-        {/* eyebrow */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-beige-200 shadow-sm mb-6">
-          <span className="w-2 h-2 rounded-full bg-electric-blue animate-pulse" />
-          <span className="text-xs font-semibold tracking-widest uppercase text-beige-600">
-            SIH 2025 · Ministry of NER · Problem ID 25002
-          </span>
-        </div>
-
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] tracking-tight text-beige-900 mb-6">
           Intelligent Safety for{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-blue-500 to-emerald-safe">
@@ -696,7 +688,9 @@ export default function Hero() {
               Download APK
             </a>
             <a
-              href="#demo"
+              href="https://safetrail-authority-dashboard.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white hover:bg-beige-50 text-beige-900 px-7 py-3.5 rounded-xl font-bold transition-all border border-beige-300 shadow-sm hover:shadow-md active:scale-95"
             >
               Authority Dashboard

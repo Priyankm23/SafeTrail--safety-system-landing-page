@@ -18,10 +18,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Features", href: "#features" },
+    { name: "Problem Discussion", href: "#problems" },
     { name: "Architecture", href: "#architecture" },
+    { name: "Features", href: "#features" },
     { name: "Components", href: "#components" },
-    { name: "Tech Stack", href: "#tech-stack" },
+    { name: "Live", href: "#demo" },
   ];
 
   return (

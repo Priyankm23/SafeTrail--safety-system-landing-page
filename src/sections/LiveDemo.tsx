@@ -110,7 +110,8 @@ export default function LiveDemo() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="#"
+                href="https://safetrail-authority-dashboard.vercel.app/"
+                target="_blank"
                 className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl bg-electric-blue hover:bg-blue-600 font-bold text-sm transition-all active:scale-95 shadow-[0_4px_20px_rgba(29,111,196,0.5)]"
               >
                 Open dashboard <ExternalLink className="w-4 h-4" />
